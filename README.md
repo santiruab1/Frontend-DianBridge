@@ -1,89 +1,113 @@
-# Vite + Tailwind CSS Boilerplate
+# DIANBridge - Web Application
 
-This project is a boilerplate that uses Vite and Tailwind CSS to create fast and modern web applications. It provides an optimized initial configuration for an efficient development workflow.
+DIANBridge is a web application designed to simplify and automate the integration of electronic invoices with the DIAN platform. This project provides a responsive and user-friendly interface for managing invoices, subscriptions, and reports.
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+## Project Overview
 
-## Key Features
+This project is built using **HTML**, **CSS**, and **Bootstrap** for the frontend, with **Vite** as the build tool and **Tailwind CSS** for utility-first styling. The application includes multiple pages, each serving a specific purpose.
 
-- **Vite:** An extremely fast and lightweight frontend build tool that greatly improves the development experience.
-- **Tailwind CSS:** A utility-first CSS framework that allows you to quickly build custom user interfaces.
-- **Simplified Configuration:** Predefined configuration for a quick and easy start.
-- **Organized Project Structure:** A clear and maintainable folder structure.
-- **Fast Development:** Instant browser reload during development.
-- **Production Optimization:** Optimized builds for deployment.
+---
 
-## Prerequisites
-Make sure you have Node.js and npm (Node Package Manager) installed on your system.
+## HTML Structure and Pages
 
-**Node.js:** (version 20 or higher recommended)
-- Download from: nodejs.org
+### 1. **Home Page (`index.html`)**
+   - **Purpose**: Serves as the landing page for the application.
+   - **Key Features**:
+     - Welcome section with a logo and introduction.
+     - Pricing table showcasing membership plans.
+     - Services section highlighting features like automation, support, and optimization.
+     - FAQ accordion for common questions.
+   - **File**: [`src/index.html`](src/index.html)
 
-## Quick Start
-Follow these steps to start working on the project:
-**1. Clone the Repository:**
-```sh
-git clone <REPOSITORY_URL>
-Replace <REPOSITORY_URL> with the actual URL of your repository.
-```
-**2. Navigate to the Project Directory:**
-```sh
-cd <DIRECTORY_NAME>
-Replace <DIRECTORY_NAME> with the name of the directory that was created when cloning the repository.
-```
-**3. Install Dependencies:**
-```sh
-npm install
-```
-This command will install all the necessary dependencies defined in `package.json`.
+### 2. **About Us Page (`aboutus.html`)**
+   - **Purpose**: Provides information about the mission, vision, and values of DIANBridge.
+   - **Key Features**:
+     - Mission and vision statements.
+     - List of core values (e.g., innovation, transparency, security).
+   - **File**: [`src/aboutus.html`](src/aboutus.html)
 
-## Development
-To start the development server, run the following command:
-```sh
-npm run dev
-```
-This will start the server at `http://localhost:5173` (or the port configured in `vite.config.js`). The browser will open automatically (or you can open it manually) to display your application. Changes you make to the `src` files will be instantly reflected in the browser thanks to Vite's hot reload.
+### 3. **Pricing Page (`pricing.html`)**
+   - **Purpose**: Displays membership plans and their features.
+   - **Key Features**:
+     - Cards for each membership plan (Free, Monthly, Annual).
+     - Pricing comparison table.
+   - **File**: [`src/pricing.html`](src/pricing.html)
 
-## Production Build
-To build the project for production, use the following command:
-```sh
-npm run build
-```
-This command will create a `dist` folder in the project root. This folder will contain the optimized files for deployment.
+### 4. **Login Page (`inicioSesion.html`)**
+   - **Purpose**: Allows users to log in to their accounts.
+   - **Key Features**:
+     - Login form with email and password fields.
+     - Carousel showcasing application features.
+   - **File**: [`src/inicioSesion.html`](src/inicioSesion.html)
 
-## Preview Production Version
-To preview the production version locally, run:
-```sh
-npm run preview
-This command will start a local server that serves the files in the dist folder.
-```
+### 5. **User Dashboard (`interfazUsuario.html`)**
+   - **Purpose**: Provides a dashboard for managing invoices, reports, and subscriptions.
+   - **Key Features**:
+     - Sidebar navigation for different sections (e.g., invoices, reports, settings).
+     - Cards for quick actions like generating reports and managing subscriptions.
+   - **File**: [`src/interfazUsuario.html`](src/interfazUsuario.html)
 
-## Essential Commands
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the project for production.
-- `npm run preview`: Locally previews the production version.
+---
 
-## Project Structure
-```Markdown
+## CSS and Styling
 
-tailwind-boilerplate-master/
-├── public/                 # Public static files
-│   ├── favicon.ico         # Site icon
-├── src/                    # Application source files
-│   ├── assets/
-│   │   └── css/
-│   │       └── style.css   # Main CSS file
-│   ├── js/                 
-│   │   ├── shared/         
-│   │   └── index.js        # Main JS file
-│   └── index.html          # Application entry point
-├── .gitignore              # Git ignore file
-├── package.json            # Project dependencies and scripts
-├── postcss.config.js       # PostCSS configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── vite.config.js          # Vite configuration
-└── README.md               # Project documentation
-```
+The project uses a combination of **Bootstrap** and custom CSS for styling. The main CSS file is located at:
+
+- **File**: [`src/assets/css/style.css`](src/assets/css/style.css)
+
+### Key Styling Features:
+- Responsive design for all pages.
+- Custom styles for headers, tables, login forms, and carousels.
+- Media queries for mobile-friendly layouts.
+
+---
+
+## Images and Assets
+
+The project includes several images for the carousel and branding:
+
+- **Carousel Images**: Located in [`src/assets/images/`](src/assets/images/)
+- **Logo**: `LogoBlanco.png` and `LogoBlancoSombra.png`
+
+---
+
+## Development and Build Tools
+
+- **Vite**: Used as the build tool for fast development and optimized production builds.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **PostCSS**: Configured for Tailwind CSS integration.
+
+### Configuration Files:
+- [`vite.config.js`](vite.config.js)
+- [`tailwind.config.js`](tailwind.config.js)
+- [`postcss.config.js`](postcss.config.js)
+
+---
+
+## How to Run the Project
+
+1. **Install Dependencies**:
+   ```sh
+   npm install
+   ```
+
+2. **Start Development Server**:
+   ```sh
+   npm run dev
+   ```
+
+3. **Build for Production**:
+   ```sh
+   npm run build
+   ```
+
+4. **Preview Production Build**:
+   ```sh
+   npm run preview
+   ```
+
+---
 
 ## License
-This project is licensed under the `BSD 3-Clause` License. See the `LICENSE` file for more details.
+
+This project is licensed under the BSD 3-Clause License. See the [`LICENSE`](LICENSE) file for details.
